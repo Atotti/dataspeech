@@ -8,3 +8,5 @@ plots/*
 
 wav
 .env
+.output
+output

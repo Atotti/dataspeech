@@ -1,10 +1,6 @@
 from datasets import DatasetDict, Audio
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-
-token = os.getenv("HUGGINGFACE_TOKEN")
 
 path = os.path.realpath(__file__)
 csv_path = os.path.join(os.path.dirname(path), "jsut_ver1.1_basic5000.csv")
@@ -23,4 +19,4 @@ dataset["train"] = dataset["train"].map(convert_to_absolute_path)
 dataset = dataset.cast_column("audio", Audio())
 
 # データセットをHuggingFace Hubにプッシュ（JSUTコーパスの再配布は許可されていないのでプライベートに）
-dataset.push_to_hub("Atotti/jsut-corpus-datasets", private=True, token=token)
+dataset.push_to_hub("Atotti/jsut-corpus-datasets", private=True)

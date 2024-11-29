@@ -3,7 +3,7 @@ name = "dataspeech"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
     "accelerate>=1.1.1",
     "bitsandbytes>=0.44.1",
@@ -11,10 +11,17 @@ dependencies = [
     "datasets[audio]>=3.1.0",
     "demucs>=4.0.1",
     "g2p>=2.2.0",
+    "numpy<2",
     "penn>=0.0.14",
-    "python-dotenv>=1.0.1",
+    "torch==2.4.0+cu121",
     "transformers>=4.46.3",
 ]
 
+[[tool.uv.index]]
+name = "torch-cuda"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
 [tool.uv.sources]
-brouhaha = { url = "https://github.com/marianne-m/brouhaha-vad/archive/main.zip" }
+torch = { index = "torch-cuda" }
+brouhaha = { git = "https://github.com/marianne-m/brouhaha-vad" }
