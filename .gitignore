@@ -4,3 +4,9 @@ env_dataspeech/*
 wip_scripts/*
 plots/*
 .vscode/*
+.venv
+
+wav
+.env
+.output
+output
