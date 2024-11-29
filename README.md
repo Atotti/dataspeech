@@ -1,4 +1,9 @@
+[note.md](https://github.com/Atotti/dataspeech/blob/main/note.md)にJSUTコーパスでParlerTTS用データセット構築のための手順を記述した。
+
+====ここから下はオリジナルのREADME====
+
 # Data-Speech
+
 
 Data-Speech is a suite of utility scripts designed to tag speech datasets. 
 
