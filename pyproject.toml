@@ -1,0 +1,20 @@
+[project]
+name = "dataspeech"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "accelerate>=1.1.1",
+    "bitsandbytes>=0.44.1",
+    "brouhaha",
+    "datasets[audio]>=3.1.0",
+    "demucs>=4.0.1",
+    "g2p>=2.2.0",
+    "penn>=0.0.14",
+    "python-dotenv>=1.0.1",
+    "transformers>=4.46.3",
+]
+
+[tool.uv.sources]
+brouhaha = { url = "https://github.com/marianne-m/brouhaha-vad/archive/main.zip" }
